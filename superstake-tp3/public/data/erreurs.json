@@ -1,0 +1,7 @@
+{
+  "description": "Jeu erreurs (données invalides ou problématiques) — à compléter par Anthony Jose Gonzalez Contreras (Mission 4).",
+  "joueur": { "id": "J-DEMO", "nom": "Joueur de démonstration", "region": "Longueuil" },
+  "regions": ["Longueuil"],
+  "packages": [],
+  "historique": []
+}

@@ -1,0 +1,159 @@
+/* Style commun de Superstake Market */
+:root {
+  --vert: #2e7d4f;
+  --vert-pale: #e8f5ec;
+  --or: #c8962c;
+  --rouge: #b3261e;
+  --rouge-pale: #fdecea;
+  --texte: #1f2933;
+  --gris: #6b7280;
+  --bordure: #d9dee3;
+  --fond: #f7f8f9;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--texte);
+  background: var(--fond);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Barre de navigation */
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 2rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--vert);
+  color: white;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.navigation nav {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.navigation a.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.choix-jeu select {
+  padding: 0.25rem;
+  border-radius: 4px;
+  border: none;
+}
+
+/* Contenu */
+.contenu {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+/* Cartes réutilisables */
+.carte {
+  background: white;
+  border: 1px solid var(--bordure);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Boutons */
+button,
+.bouton {
+  display: inline-block;
+  background: var(--vert);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button:disabled {
+  background: var(--gris);
+  cursor: not-allowed;
+}
+
+button.secondaire {
+  background: white;
+  color: var(--vert);
+  border: 1px solid var(--vert);
+}
+
+/* Messages */
+.message-erreur {
+  background: var(--rouge-pale);
+  color: var(--rouge);
+  border: 1px solid var(--rouge);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+}
+
+.message-succes {
+  background: var(--vert-pale);
+  color: var(--vert);
+  border: 1px solid var(--vert);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+}
+
+.premium {
+  color: var(--or);
+  font-weight: 700;
+}
+
+/* Tableaux */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--bordure);
+}
+
+th {
+  background: var(--vert-pale);
+}
+
+/* Page en construction */
+.a-venir {
+  color: var(--gris);
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .contenu {
+    padding: 1rem;
+  }
+}

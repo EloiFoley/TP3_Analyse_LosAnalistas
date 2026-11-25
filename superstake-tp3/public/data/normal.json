@@ -1,0 +1,140 @@
+{
+  "description": "Jeu normal : données réalistes pour les scénarios habituels. Tous les packages sont publiés et conformes (valeur moyenne ≥ prix payé).",
+  "joueur": { "id": "J-DEMO", "nom": "Joueur de démonstration", "region": "Longueuil" },
+  "regions": ["Longueuil", "Brossard", "Saint-Hubert", "Boucherville"],
+  "packages": [
+    {
+      "id": "fromage",
+      "nom": "Package fromage",
+      "categorie": "Fromage",
+      "regions": ["Longueuil", "Brossard", "Saint-Hubert"],
+      "publie": true,
+      "produitBase": { "nom": "Cheddar doux 400 g", "prixRegulier": 6.00 },
+      "produitPremium": { "nom": "Fromage fin d'une fromagerie locale 250 g", "prixRegulier": 12.00 },
+      "niveaux": {
+        "standard": { "supplement": 1.00, "probabilitePremium": 0.20 },
+        "booste": { "supplement": 2.00, "probabilitePremium": 0.40 }
+      }
+    },
+    {
+      "id": "cafe",
+      "nom": "Package café",
+      "categorie": "Café",
+      "regions": ["Longueuil", "Boucherville"],
+      "publie": true,
+      "produitBase": { "nom": "Café moulu 340 g", "prixRegulier": 7.99 },
+      "produitPremium": { "nom": "Café torréfié localement 340 g", "prixRegulier": 15.99 },
+      "niveaux": {
+        "standard": { "supplement": 0.75, "probabilitePremium": 0.15 },
+        "booste": { "supplement": 1.50, "probabilitePremium": 0.30 }
+      }
+    },
+    {
+      "id": "viande",
+      "nom": "Package viande",
+      "categorie": "Viande",
+      "regions": ["Brossard", "Saint-Hubert"],
+      "publie": true,
+      "produitBase": { "nom": "Poitrines de poulet 1 kg", "prixRegulier": 13.99 },
+      "produitPremium": { "nom": "Poitrines de poulet biologique d'une ferme locale 1 kg", "prixRegulier": 24.99 },
+      "niveaux": {
+        "standard": { "supplement": 1.00, "probabilitePremium": 0.12 },
+        "booste": { "supplement": 2.00, "probabilitePremium": 0.25 }
+      }
+    },
+    {
+      "id": "legumes",
+      "nom": "Package légumes",
+      "categorie": "Légumes",
+      "regions": ["Longueuil", "Brossard", "Saint-Hubert", "Boucherville"],
+      "publie": true,
+      "produitBase": { "nom": "Mélange de légumes surgelés 750 g", "prixRegulier": 4.49 },
+      "produitPremium": { "nom": "Panier de légumes biologiques d'une ferme de la Montérégie", "prixRegulier": 11.99 },
+      "niveaux": {
+        "standard": { "supplement": 0.50, "probabilitePremium": 0.10 },
+        "booste": { "supplement": 1.00, "probabilitePremium": 0.20 }
+      }
+    },
+    {
+      "id": "pain",
+      "nom": "Package pain",
+      "categorie": "Boulangerie",
+      "regions": ["Longueuil", "Saint-Hubert"],
+      "publie": true,
+      "produitBase": { "nom": "Pain blanc tranché 675 g", "prixRegulier": 3.49 },
+      "produitPremium": { "nom": "Pain au levain d'une boulangerie artisanale 800 g", "prixRegulier": 7.99 },
+      "niveaux": {
+        "standard": { "supplement": 0.50, "probabilitePremium": 0.15 },
+        "booste": { "supplement": 1.00, "probabilitePremium": 0.30 }
+      }
+    }
+  ],
+  "historique": [
+    {
+      "id": "T-0001",
+      "date": "2026-11-08T18:42:00",
+      "packageId": "fromage",
+      "packageNom": "Package fromage",
+      "niveau": "standard",
+      "prixPaye": 7.00,
+      "produitObtenu": "Cheddar doux 400 g",
+      "premium": false,
+      "statut": "Retire"
+    },
+    {
+      "id": "T-0002",
+      "date": "2026-11-10T19:05:00",
+      "packageId": "cafe",
+      "packageNom": "Package café",
+      "niveau": "booste",
+      "prixPaye": 9.49,
+      "produitObtenu": "Café torréfié localement 340 g",
+      "premium": true,
+      "statut": "Retire"
+    },
+    {
+      "id": "T-0003",
+      "date": "2026-11-12T17:30:00",
+      "packageId": "legumes",
+      "packageNom": "Package légumes",
+      "niveau": "standard",
+      "prixPaye": 4.99,
+      "produitObtenu": "Mélange de légumes surgelés 750 g",
+      "premium": false,
+      "statut": "Retire"
+    },
+    {
+      "id": "T-0004",
+      "date": "2026-11-15T12:15:00",
+      "packageId": "pain",
+      "packageNom": "Package pain",
+      "niveau": "standard",
+      "prixPaye": 3.99,
+      "produitObtenu": "Pain blanc tranché 675 g",
+      "premium": false,
+      "statut": "Expire"
+    },
+    {
+      "id": "T-0005",
+      "date": "2026-11-18T18:20:00",
+      "packageId": "fromage",
+      "packageNom": "Package fromage",
+      "niveau": "booste",
+      "prixPaye": 8.00,
+      "produitObtenu": "Fromage fin d'une fromagerie locale 250 g",
+      "premium": true,
+      "statut": "QrEmis"
+    },
+    {
+      "id": "T-0006",
+      "date": "2026-11-21T10:48:00",
+      "packageId": "cafe",
+      "packageNom": "Package café",
+      "niveau": "standard",
+      "prixPaye": 8.74,
+      "produitObtenu": "Café moulu 340 g",
+      "premium": false,
+      "statut": "QrEmis"
+    }
+  ]
+}

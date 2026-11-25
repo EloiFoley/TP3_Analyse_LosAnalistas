@@ -1,0 +1,7 @@
+{
+  "description": "Jeu limites (valeurs aux frontières) — à compléter par Aleck Santiago Pinilla Pulido (Mission 4).",
+  "joueur": { "id": "J-DEMO", "nom": "Joueur de démonstration", "region": "Longueuil" },
+  "regions": ["Longueuil"],
+  "packages": [],
+  "historique": []
+}
