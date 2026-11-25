@@ -1,0 +1,50 @@
+/* Style de la page Chances (US-05) */
+
+/* Les deux niveaux côte à côte sur ordinateur */
+.niveaux {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Les noms de produits très longs passent à la ligne au lieu de déborder */
+.produits,
+.niveau {
+  overflow-wrap: anywhere;
+}
+
+.niveau h2 {
+  margin-top: 0;
+}
+
+/* Étiquette à gauche, valeur à droite */
+.niveau dl {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem 1rem;
+  margin: 0 0 1rem;
+}
+
+.niveau dt {
+  color: var(--gris);
+}
+
+.niveau dd {
+  margin: 0;
+  font-weight: 600;
+  text-align: right;
+}
+
+.mention-conforme {
+  background: var(--vert-pale);
+  color: var(--vert);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+}
+
+/* Sur téléphone : un niveau sous l'autre */
+@media (max-width: 600px) {
+  .niveaux {
+    grid-template-columns: 1fr;
+  }
+}

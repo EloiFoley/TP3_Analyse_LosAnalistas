@@ -2,6 +2,77 @@
   "description": "Jeu limites (valeurs aux frontières) — à compléter par Aleck Santiago Pinilla Pulido (Mission 4).",
   "joueur": { "id": "J-DEMO", "nom": "Joueur de démonstration", "region": "Longueuil" },
   "regions": ["Longueuil"],
-  "packages": [],
+  "packages": [
+    {
+      "casTest": "US-05 — Eloi — Limite : probabilité 0 % (standard), valeur moyenne = prix payé avec supplément 0 $",
+      "id": "us05-proba-0",
+      "nom": "Package probabilité 0 %",
+      "categorie": "Fromage",
+      "regions": ["Longueuil"],
+      "publie": true,
+      "produitBase": { "nom": "Cheddar doux 400 g", "prixRegulier": 6.00 },
+      "produitPremium": { "nom": "Fromage fin d'une fromagerie locale 250 g", "prixRegulier": 12.00 },
+      "niveaux": {
+        "standard": { "supplement": 0.00, "probabilitePremium": 0 },
+        "booste": { "supplement": 1.00, "probabilitePremium": 0.25 }
+      }
+    },
+    {
+      "casTest": "US-05 — Eloi — Limite : probabilité 100 % aux deux niveaux",
+      "id": "us05-proba-100",
+      "nom": "Package probabilité 100 %",
+      "categorie": "Café",
+      "regions": ["Longueuil"],
+      "publie": true,
+      "produitBase": { "nom": "Café moulu 340 g", "prixRegulier": 8.00 },
+      "produitPremium": { "nom": "Café torréfié localement 340 g", "prixRegulier": 16.00 },
+      "niveaux": {
+        "standard": { "supplement": 1.00, "probabilitePremium": 1 },
+        "booste": { "supplement": 2.00, "probabilitePremium": 1 }
+      }
+    },
+    {
+      "casTest": "US-05 — Eloi — Limite : probabilité 1/6, valeur moyenne = prix payé",
+      "id": "us05-egalite",
+      "nom": "Package égalité",
+      "categorie": "Fromage",
+      "regions": ["Longueuil"],
+      "publie": true,
+      "produitBase": { "nom": "Cheddar doux 400 g", "prixRegulier": 6.00 },
+      "produitPremium": { "nom": "Fromage fin d'une fromagerie locale 250 g", "prixRegulier": 12.00 },
+      "niveaux": {
+        "standard": { "supplement": 1.00, "probabilitePremium": 0.16666666666666666 },
+        "booste": { "supplement": 2.00, "probabilitePremium": 0.3333333333333333 }
+      }
+    },
+    {
+      "casTest": "US-05 — Eloi — Limite : suppléments de 0,50 $ (standard) et de 1,00 $ (boosté)",
+      "id": "us05-supplements",
+      "nom": "Package suppléments",
+      "categorie": "Légumes",
+      "regions": ["Longueuil"],
+      "publie": true,
+      "produitBase": { "nom": "Mélange de légumes surgelés 750 g", "prixRegulier": 4.00 },
+      "produitPremium": { "nom": "Panier de légumes biologiques", "prixRegulier": 10.00 },
+      "niveaux": {
+        "standard": { "supplement": 0.50, "probabilitePremium": 0.10 },
+        "booste": { "supplement": 1.00, "probabilitePremium": 0.20 }
+      }
+    },
+    {
+      "casTest": "US-05 — Eloi — Limite : nom de produit très long",
+      "id": "us05-nom-long",
+      "nom": "Package boulangerie artisanale de la Montérégie avec un nom particulièrement long pour tester l'affichage",
+      "categorie": "Boulangerie",
+      "regions": ["Longueuil"],
+      "publie": true,
+      "produitBase": { "nom": "Pain blanc tranché de format familial enrichi de vitamines et minéraux, sans agent de conservation ajouté, 675 g", "prixRegulier": 3.49 },
+      "produitPremium": { "nom": "Pain au levain naturel fermenté pendant quarante-huit heures, cuit sur la sole dans un four à bois d'une boulangerie artisanale de la Montérégie, 800 g", "prixRegulier": 7.99 },
+      "niveaux": {
+        "standard": { "supplement": 0.50, "probabilitePremium": 0.15 },
+        "booste": { "supplement": 1.00, "probabilitePremium": 0.30 }
+      }
+    }
+  ],
   "historique": []
 }

@@ -2,6 +2,77 @@
   "description": "Jeu erreurs (données invalides ou problématiques) — à compléter par Anthony Jose Gonzalez Contreras (Mission 4).",
   "joueur": { "id": "J-DEMO", "nom": "Joueur de démonstration", "region": "Longueuil" },
   "regions": ["Longueuil"],
-  "packages": [],
+  "packages": [
+    {
+      "casTest": "US-05 — Eloi — Erreur : package non conforme (valeur moyenne < prix payé au niveau standard)",
+      "id": "us05-non-conforme",
+      "nom": "Package non conforme",
+      "categorie": "Fromage",
+      "regions": ["Longueuil"],
+      "publie": true,
+      "produitBase": { "nom": "Cheddar doux 400 g", "prixRegulier": 6.00 },
+      "produitPremium": { "nom": "Fromage fin d'une fromagerie locale 250 g", "prixRegulier": 12.00 },
+      "niveaux": {
+        "standard": { "supplement": 2.00, "probabilitePremium": 0.10 },
+        "booste": { "supplement": 2.00, "probabilitePremium": 0.40 }
+      }
+    },
+    {
+      "casTest": "US-05 — Eloi — Erreur : package non publié (sinon conforme)",
+      "id": "us05-non-publie",
+      "nom": "Package non publié",
+      "categorie": "Café",
+      "regions": ["Longueuil"],
+      "publie": false,
+      "produitBase": { "nom": "Café moulu 340 g", "prixRegulier": 7.99 },
+      "produitPremium": { "nom": "Café torréfié localement 340 g", "prixRegulier": 15.99 },
+      "niveaux": {
+        "standard": { "supplement": 0.75, "probabilitePremium": 0.15 },
+        "booste": { "supplement": 1.50, "probabilitePremium": 0.30 }
+      }
+    },
+    {
+      "casTest": "US-05 — Eloi — Erreur : probabilité > 1 (niveau boosté à 1,5)",
+      "id": "us05-proba-sup-1",
+      "nom": "Package probabilité supérieure à 1",
+      "categorie": "Viande",
+      "regions": ["Longueuil"],
+      "publie": true,
+      "produitBase": { "nom": "Poitrines de poulet 1 kg", "prixRegulier": 13.99 },
+      "produitPremium": { "nom": "Poitrines de poulet biologique 1 kg", "prixRegulier": 24.99 },
+      "niveaux": {
+        "standard": { "supplement": 1.00, "probabilitePremium": 0.12 },
+        "booste": { "supplement": 2.00, "probabilitePremium": 1.5 }
+      }
+    },
+    {
+      "casTest": "US-05 — Eloi — Erreur : probabilité négative (niveau standard à -0,1)",
+      "id": "us05-proba-negative",
+      "nom": "Package probabilité négative",
+      "categorie": "Légumes",
+      "regions": ["Longueuil"],
+      "publie": true,
+      "produitBase": { "nom": "Mélange de légumes surgelés 750 g", "prixRegulier": 4.49 },
+      "produitPremium": { "nom": "Panier de légumes biologiques", "prixRegulier": 11.99 },
+      "niveaux": {
+        "standard": { "supplement": 0.50, "probabilitePremium": -0.1 },
+        "booste": { "supplement": 1.00, "probabilitePremium": 0.20 }
+      }
+    },
+    {
+      "casTest": "US-05 — Eloi — Erreur : prix du produit premium manquant",
+      "id": "us05-premium-sans-prix",
+      "nom": "Package premium sans prix",
+      "categorie": "Boulangerie",
+      "regions": ["Longueuil"],
+      "publie": true,
+      "produitBase": { "nom": "Pain blanc tranché 675 g", "prixRegulier": 3.49 },
+      "produitPremium": { "nom": "Pain au levain d'une boulangerie artisanale 800 g" },
+      "niveaux": {
+        "standard": { "supplement": 0.50, "probabilitePremium": 0.15 },
+        "booste": { "supplement": 1.00, "probabilitePremium": 0.30 }
+      }
+    }
+  ],
   "historique": []
 }
